@@ -1,0 +1,41 @@
+<section class="mx-10">
+    <div class="stat-value">{{ country().name }}</div>
+    <div class="stats shadow mt-5">
+        <div class="stat place-items-center">
+            <div class="stat-figure text-primary"></div>
+            <div class="stat-title">Capital</div>
+            <div class="stat-value text-primary">{{ country().capital }}</div>
+        </div>
+
+        <div class="stat place-items-center">
+            <div class="stat-figure text-secondary"></div>
+            <div class="stat-title">Región</div>
+            <div class="stat-value text-secondary">{{ country().region }}</div>
+        </div>
+
+        <div class="stat place-items-center">
+            <div class="stat-figure text-secondary"></div>
+            <div class="stat-title">Sub región</div>
+            <div class="stat-value text-secondary">{{ country().subRegion }}</div>
+        </div>
+
+        <div class="stat place-items-center">
+            <div class="stat-figure text-secondary">
+            <div class="avatar avatar-online">
+            </div>
+            </div>
+            <div class="stat-title">Población</div>
+            <div class="stat-value text-green-400">{{ country().population | number }}</div>
+        </div>
+    </div>
+
+    <figure class="diff aspect-16/9 mt-10" tabindex="0">
+        <div class="diff-item-1" role="img" tabindex="0">
+            <img alt="daisy" src="{{ country().flagSvg }}" />
+        </div>
+        <div class="diff-item-2" role="img">
+            <img class="blur-sm" alt="daisy" src="{{ country().flagSvg }}" />
+        </div>
+        <div class="diff-resizer"></div>
+    </figure>
+</section>
